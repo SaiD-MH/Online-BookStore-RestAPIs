@@ -21,6 +21,6 @@ public class Cart {
     @ManyToOne(fetch = FetchType.EAGER  )
     private User user;
     @Column(name = "quantity")
-    private int quantity;
+    private long quantity;
 
 }

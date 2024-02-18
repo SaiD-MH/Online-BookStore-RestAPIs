@@ -92,7 +92,7 @@ public class CartServiceImpl implements CartService {
 
                     Cart savedCart = cartRepository.findByBookIdAndUserId(dtocart.getBookId(), user.getId()).get();
 
-                    int newQuantity = dtocart.getQuantity() + savedCart.getQuantity();
+                    long newQuantity = dtocart.getQuantity() + savedCart.getQuantity();
                     savedCart.setQuantity(newQuantity);
                     reponseCartsList.add(mapToCartDto(user, book, cartRepository.save(savedCart)));
 
@@ -119,7 +119,7 @@ public class CartServiceImpl implements CartService {
 
             if (sessionData.containsKey(cartDto.getBookId())) {
 
-                int oldQuantity = sessionData.get(cartDto.getBookId()).getQuantity();
+                long oldQuantity = sessionData.get(cartDto.getBookId()).getQuantity();
                 cartDto.setQuantity(
                         oldQuantity + cartDto.getQuantity()
                 );
@@ -139,6 +139,8 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public List<CartDto> getAllCartsByUserId(long userId, HttpSession session) {
+
+        System.out.println("HEREEEEEEEEEEEEEEEEEEEEE");
 
         List<CartDto> cartDtoList = new ArrayList<>();
 
@@ -215,7 +217,7 @@ public class CartServiceImpl implements CartService {
                     (Map<Long, CartDto>) session.getAttribute("sessionData");
 
 
-            int oldQuantity = sessionData.get(cartDto.getBookId()).getQuantity();
+            long oldQuantity = sessionData.get(cartDto.getBookId()).getQuantity();
             cartDto.setQuantity(
                     oldQuantity + cartDto.getQuantity()
             );

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/cart") // for Not Logged Users user [0] as query param
+@RequestMapping("/api/carts") // for Not Logged Users user [0] as query param
 public class CartController {
 
 

@@ -11,7 +11,7 @@ public class CartDto {
     private long cartId;
     private Long userId;
     private Long bookId;
-    private int quantity;
+    private long quantity;
 
 
 }
