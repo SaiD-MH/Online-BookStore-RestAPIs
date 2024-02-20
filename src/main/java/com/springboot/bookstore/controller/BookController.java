@@ -3,6 +3,7 @@ package com.springboot.bookstore.controller;
 import com.springboot.bookstore.payload.BookDto;
 import com.springboot.bookstore.payload.BookResponse;
 import com.springboot.bookstore.service.BookService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,8 @@ import static com.springboot.bookstore.utils.AppConstants.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("/api/v1/books")
+@Tag(name = "REST APIs for Book Resource")
 public class BookController {
 
 

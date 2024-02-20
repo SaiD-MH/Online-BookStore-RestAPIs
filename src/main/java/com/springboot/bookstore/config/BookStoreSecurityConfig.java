@@ -40,12 +40,19 @@ public class BookStoreSecurityConfig {
         http.authorizeHttpRequests((request) -> request
 
 
-                .requestMatchers(HttpMethod.GET, "/api/books/**").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/books").hasAnyRole("ADMIN", "AUTHOR")
-                .requestMatchers(HttpMethod.DELETE, "/api/books/**").hasRole("ADMIN")
-                .requestMatchers(HttpMethod.PUT, "/api/books/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.GET, "/api/v1/books/**").permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/v1/books").hasAnyRole("ADMIN", "AUTHOR")
+                .requestMatchers(HttpMethod.DELETE, "/api/v1/books/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.PUT, "/api/v1/books/**").hasRole("ADMIN")
 
-                .requestMatchers("/api/orders/**").authenticated()
+                .requestMatchers("/api/v1/orders/**").authenticated()
+
+                .requestMatchers(
+                        "/v3/api-docs",
+                        "/v3/api-docs/**",
+                        "/swagger-ui/**",
+                        "/swagger-ui.html"
+                ).permitAll()
 
                 .anyRequest().permitAll()
 

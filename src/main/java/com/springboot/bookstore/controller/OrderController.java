@@ -3,6 +3,7 @@ package com.springboot.bookstore.controller;
 import com.springboot.bookstore.payload.CheckAllRequest;
 import com.springboot.bookstore.payload.OrderResponse;
 import com.springboot.bookstore.service.OrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/orders")
+@RequestMapping("/api/v1/orders")
+@Tag(name = "REST APIs for Order Resource")
 public class OrderController {
 
     private OrderService orderService;

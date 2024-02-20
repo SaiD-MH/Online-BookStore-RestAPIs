@@ -2,6 +2,7 @@ package com.springboot.bookstore.controller;
 
 import com.springboot.bookstore.payload.CartDto;
 import com.springboot.bookstore.service.CartService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,10 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/carts") // for Not Logged Users user [0] as query param
+@RequestMapping("/api/v1/carts") // for Not Logged Users user [0] as query param
+@Tag(name = "REST APIs for Cart Resource")
 public class CartController {
-
-
 
 
     private CartService cartService;
