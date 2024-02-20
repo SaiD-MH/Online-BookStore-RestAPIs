@@ -21,6 +21,15 @@ public class BookStoreSecurityConfig {
         http.authorizeHttpRequests((request) -> request
 
 
+                .requestMatchers(HttpMethod.GET , "/api/books/**").permitAll()
+                .requestMatchers(HttpMethod.POST , "/api/books").hasAnyRole("ADMIN" , "AUTHOR")
+                .requestMatchers(HttpMethod.DELETE,"/api/books/**").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.PUT,"/api/books/**").hasRole("ADMIN")
+
+                .requestMatchers("/api/orders/**").authenticated()
+
+
+
                 .anyRequest().permitAll()
 
 

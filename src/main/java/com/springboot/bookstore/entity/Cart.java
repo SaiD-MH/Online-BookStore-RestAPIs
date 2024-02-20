@@ -16,9 +16,9 @@ public class Cart {
     @Column(name = "id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER )
+    @ManyToOne(fetch = FetchType.EAGER , cascade = CascadeType.REMOVE)
     private Book book;
-    @ManyToOne(fetch = FetchType.EAGER  )
+    @ManyToOne(fetch = FetchType.EAGER , cascade = CascadeType.REMOVE )
     private User user;
     @Column(name = "quantity")
     private long quantity;

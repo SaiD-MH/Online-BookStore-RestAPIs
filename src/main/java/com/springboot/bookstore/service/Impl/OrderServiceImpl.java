@@ -76,9 +76,6 @@ public class OrderServiceImpl implements OrderService {
 
         User user = userIdMatchLoggedOne(userId);
 
-        if (user.getId() != userId)
-            throw new BookStoreException(HttpStatus.BAD_REQUEST, "Bad User-ID");
-
         return orderRepository.findByUserId(userId).stream()
                 .map((order) -> modelMapper.map(order, OrderResponse.class))
                 .collect(Collectors.toList());
