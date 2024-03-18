@@ -4,7 +4,7 @@ This is a backend-focused Spring Boot project for an online book store. The proj
 
 ## Technologies Used
 
-- Java
+- Java 8
 - Spring Boot
 - Spring Data JPA
 - Spring Security
@@ -13,7 +13,8 @@ This is a backend-focused Spring Boot project for an online book store. The proj
 - RESTful APIs
 - MySQL (or your preferred database)
 - Swagger (or OpenAPI) for API documentation
-- HTTPS for secure communication
+- Postman
+- JWT   
 
 ## Features Implemented
 
