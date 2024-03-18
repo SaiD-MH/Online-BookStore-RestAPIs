@@ -38,15 +38,10 @@ This is a backend-focused Spring Boot project for an online book store. The proj
    - Update order status, generate invoices
 
 5. **Security and Data Privacy:**
-   - HTTPS for secure communication
    - Input validation, error handling
    - SQL injection prevention, data encryption
 
-6. **Logging and Monitoring:**
-   - Logging application events, error traces
-   - Monitoring performance, generating alerts
-
-7. **Documentation:**
+6. **Documentation:**
    - Swagger/OpenAPI for API documentation
    - Readme file with project overview, setup instructions
 
