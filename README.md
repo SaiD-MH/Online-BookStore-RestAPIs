@@ -52,3 +52,37 @@ This is a backend-focused Spring Boot project for an online book store. The proj
 ## Setup Instructions
 
 1. Clone the repository:
+   git clone https://github.com/SaiD-MH/Online-BookStore-RestAPIs.git
+
+2. Navigate to the project directory:
+   cd Online-BookStore-RestAPIs
+
+3. Build the project using Maven:
+   mvn clean install
+
+4. Run the application locally:
+   mvn spring-boot:run
+
+
+5. Access the API documentation:
+- Open your browser and go to: `http://localhost:8080/swagger-ui.html`
+  
+6.access the application in your browser:
+- Open your web browser and go to: `http://localhost:8080`## Deployment
+
+### Database Configuration
+
+1. By default, the application uses an in-memory H2 database for local testing.
+2. For production or persistent storage, configure a MySQL or PostgreSQL database by updating the `application.properties` file with the database URL, username, password, and other settings.
+
+## Contributing
+
+Contributions to this project are welcome. Please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+
+
