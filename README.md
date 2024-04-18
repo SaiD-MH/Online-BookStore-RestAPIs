@@ -45,6 +45,10 @@ This is a backend-focused Spring Boot project for an online book store. The proj
    - Swagger/OpenAPI for API documentation
    - Readme file with project overview, setup instructions
 
+
+## DB_SCHEMA
+  ![DB_SCHEMA](https://raw.githubusercontent.com/SaiD-MH/Online-BookStore-RestAPIs/main/src/main/resources/static/DB_SCHEMA.png)
+
 ## Setup Instructions
 
 1. Clone the repository:
